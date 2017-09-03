@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:s="https://github.com/gpor89/soap/example"
+                  name="SoapExample"
+                  targetNamespace="https://github.com/gpor89/soap/example">
+    <wsdl:types>
+        <xsd:schema targetNamespace="https://github.com/gpor89/soap/example">
+            <xsd:element name="CalculateSum">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="x" type="s:myInt"/>
+                        <xsd:element name="y" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CalculateSumResponse" type="s:CalculateSumResponse"/>
+            <xsd:complexType name="CalculateSumResponse">
+                <xsd:sequence>
+                    <xsd:element name="result" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:simpleType name="myInt">
+                <xsd:restriction base="xsd:unsignedShort">
+                    <xsd:minInclusive value="0"/>
+                    <xsd:maxInclusive value="100"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="CalculateSumRequest">
+        <wsdl:part name="parameters" element="s:CalculateSum"/>
+    </wsdl:message>
+    <wsdl:message name="CalculateSumResponse">
+        <wsdl:part name="parameters" element="s:CalculateSumResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="Calculator">
+        <wsdl:operation name="calculateSum">
+            <wsdl:input message="s:CalculateSumRequest"/>
+            <wsdl:output message="s:CalculateSumResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CalculatorSOAP" type="s:Calculator">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="calculateSum">
+            <soap:operation soapAction="https://github.com/gpor89/soap/example/calculateSum"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Calculator">
+        <wsdl:port name="CalculatorPort" binding="s:CalculatorSOAP">
+            <soap:address location="https://github.com/gpor89/soap/example"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

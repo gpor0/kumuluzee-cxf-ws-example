@@ -14,7 +14,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- custom kumuluzee version with cxf dependencies from my local repo -->
-        <kumuluz.version>2.4.0-g</kumuluz.version>
+        <kumuluz.version>2.5.0.cxf-SNAPSHOT</kumuluz.version>
         <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
         <cxf.version>3.1.12</cxf.version>
     </properties>
@@ -32,17 +32,14 @@
     </dependencyManagement>
 
     <dependencies>
-
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-microProfile-1.0</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-jax-ws-cxf</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

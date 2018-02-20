@@ -13,7 +13,7 @@ import javax.jws.WebService;
 @ApplicationScoped
 @WebService(serviceName = "Calculator", portName = "CalculatorPort", targetNamespace = "https://github.com/gpor89/soap/example",
         endpointInterface = "https.github_com.gpor89.soap.example.Calculator")
-@SchemaValidation //this is not working automatically
+@SchemaValidation
 public class CalculatorSoapServiceBean implements Calculator {
 
     @Inject

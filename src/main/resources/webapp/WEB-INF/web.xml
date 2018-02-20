@@ -3,15 +3,14 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
 
-    <!-- this should be part of kumuluzee startup procedure -->
     <servlet>
-        <display-name>MyCxfServlet</display-name>
-        <servlet-name>MyCxfServlet</servlet-name>
-        <servlet-class>com.kumuluz.ee.cxf.sample.NonSpringServlet</servlet-class>
+        <display-name>KumuluzEECxfServlet</display-name>
+        <servlet-name>KumuluzEECxfServlet</servlet-name>
+        <servlet-class>com.kumuluz.ee.jaxws.cxf.KumuluzCXFServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MyCxfServlet</servlet-name>
+        <servlet-name>KumuluzEECxfServlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 

@@ -2,11 +2,11 @@
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                  xmlns:s="https://github.com/gpor89/soap/example"
-                  name="SoapExample"
-                  targetNamespace="https://github.com/gpor89/soap/example">
+                  xmlns:s="https://github.com/gpor89/soap/sample"
+                  name="SoapSample"
+                  targetNamespace="https://github.com/gpor89/soap/sample">
     <wsdl:types>
-        <xsd:schema targetNamespace="https://github.com/gpor89/soap/example">
+        <xsd:schema targetNamespace="https://github.com/gpor89/soap/sample">
             <xsd:element name="CalculateSum">
                 <xsd:complexType>
                     <xsd:sequence>
@@ -46,7 +46,7 @@
     <wsdl:binding name="CalculatorSOAP" type="s:Calculator">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="calculateSum">
-            <soap:operation soapAction="https://github.com/gpor89/soap/example/calculateSum"/>
+            <soap:operation soapAction="https://github.com/gpor89/soap/sample/calculateSum"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>
@@ -57,7 +57,7 @@
     </wsdl:binding>
     <wsdl:service name="Calculator">
         <wsdl:port name="CalculatorPort" binding="s:CalculatorSOAP">
-            <soap:address location="https://github.com/gpor89/soap/example"/>
+            <soap:address location="https://github.com/gpor89/soap/sample"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

@@ -1,2 +1,2 @@
-# kumuluzee-cxf-ws-example
-Provides example of using kumuluzee with cxf webservice provider
+# kumuluzee-cxf-ws-sample
+Provides sample of using kumuluzee with cxf webservice provider

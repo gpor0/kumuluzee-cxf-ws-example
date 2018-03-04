@@ -16,7 +16,6 @@
         <!-- custom kumuluzee version with cxf dependencies from my local repo -->
         <kumuluz.version>2.6.0.cxf-SNAPSHOT</kumuluz.version>
         <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
-        <cxf.version>3.1.12</cxf.version>
     </properties>
 
     <dependencyManagement>
@@ -34,7 +33,15 @@
     <dependencies>
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
-            <artifactId>kumuluzee-microProfile-1.0</artifactId>
+            <artifactId>kumuluzee-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-servlet-jetty</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-cdi-weld</artifactId>
         </dependency>
         <dependency>
             <groupId>com.kumuluz.ee</groupId>

@@ -15,7 +15,7 @@ import java.util.ServiceLoader;
 
 @ApplicationScoped
 @WebService(serviceName = "Calculator", portName = "CalculatorPort", targetNamespace = "https://github.com/gpor89/soap/sample",
-        endpointInterface = "https.github_com.gpor89.soap.sample.Calculator")
+        endpointInterface = "https.github_com.gpor89.soap.sample.Calculator", wsdlLocation = "/webapp/WEB-INF/wsdls/calculatorSample.wsdl")
 @SchemaValidation
 public class CalculatorSoapServiceBean implements Calculator {
 

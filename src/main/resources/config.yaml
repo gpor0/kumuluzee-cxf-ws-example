@@ -7,6 +7,11 @@
      http:
        port: 4444
    jax-ws:
-    - path: /soap
+    - web-context: /soap
+      url: /calculator
+      implementation-class: com.kumuluz.ee.cxf.sample.CalculatorSoapServiceBean
+      wsdl-location: /webapp/WEB-INF/wsdls/calculatorSample.wsdl
+    - web-context: /soap
+      url: /calc2
       implementation-class: com.kumuluz.ee.cxf.sample.CalculatorSoapServiceBean
       wsdl-location: /webapp/WEB-INF/wsdls/calculatorSample.wsdl

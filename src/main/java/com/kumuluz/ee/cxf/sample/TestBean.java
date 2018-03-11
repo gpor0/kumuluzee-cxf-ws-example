@@ -9,8 +9,7 @@ import javax.enterprise.context.ApplicationScoped;
 public class TestBean {
 
     public String getString() {
-        System.out.println("getString called!");
-        return "It works!";
+        return "CDI works!";
     }
 
 }

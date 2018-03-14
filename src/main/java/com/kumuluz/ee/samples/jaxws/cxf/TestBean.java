@@ -1,11 +1,11 @@
-package com.kumuluz.ee.cxf.sample;
+package com.kumuluz.ee.samples.jaxws.cxf;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 
 /**
  * Just for injection test purpose.
  */
-@ApplicationScoped
+@RequestScoped
 public class TestBean {
 
     public String getString() {

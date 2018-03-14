@@ -13,8 +13,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- custom kumuluzee version with cxf dependencies from my local repo -->
-        <kumuluz.version>2.6.0.cxf-SNAPSHOT</kumuluz.version>
+        <!-- custom kumuluzee version with cxf dependencies from local repo -->
+        <kumuluz.version>3.0.0.cxf-SNAPSHOT</kumuluz.version>
         <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
     </properties>
 
@@ -46,6 +46,19 @@
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-jax-ws-cxf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-jpa-eclipselink</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-jta-narayana</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.0.0</version>
         </dependency>
     </dependencies>
 

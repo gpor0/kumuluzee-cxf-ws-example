@@ -6,10 +6,16 @@
    server:
      http:
        port: 4444
+   datasources:
+      - jndi-name: jdbc/CustomersDS
+        connection-url: jdbc:postgresql://localhost:5432/customers
+        username: postgres
+        password: postgres
+        max-pool-size: 20
    jax-ws:
-    - web-context: /soap
-      url: /calculator
-      implementation-class: com.kumuluz.ee.cxf.sample.CalculatorSoapServiceBean
-    - web-context: /soap
-      url: /calc2
-      implementation-class: com.kumuluz.ee.cxf.sample.CalculatorSoapServiceBean
+      web-context: /soap
+      endpoints:
+      - url: /calculator
+        implementation-class: com.kumuluz.ee.samples.jaxws.cxf.CalculatorSoapServiceBean
+      - url: /calc2
+        implementation-class: com.kumuluz.ee.samples.jaxws.cxf.CalculatorSoapServiceBean

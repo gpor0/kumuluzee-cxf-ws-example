@@ -1,7 +1,7 @@
 package com.kumuluz.ee.samples.jaxws.cxf;
 
 
-import com.kumuluz.ee.jaxws.cxf.ws.WsContext;
+import com.kumuluz.ee.jaxws.cxf.annotations.WsContext;
 import com.kumuluz.ee.samples.jaxws.cxf.interceptors.WsInterceptor;
 import com.kumuluz.ee.samples.jaxws.cxf.jpa.Customer;
 import com.kumuluz.ee.samples.jaxws.cxf.jpa.CustomerService;

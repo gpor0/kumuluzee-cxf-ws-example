@@ -12,10 +12,3 @@
         username: postgres
         password: postgres
         max-pool-size: 20
-   jax-ws:
-      web-context: /soap
-      endpoints:
-      - url: /calculator
-        implementation-class: com.kumuluz.ee.samples.jaxws.cxf.CalculatorSoapServiceBean
-      - url: /calc2
-        implementation-class: com.kumuluz.ee.samples.jaxws.cxf.CalculatorSoapServiceBean
